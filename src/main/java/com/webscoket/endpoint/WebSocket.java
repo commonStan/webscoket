@@ -26,7 +26,7 @@ public class WebSocket {
     boolean index = false;
 
     @OnOpen
-    public void onOpen() throws IOException {
+    public void onOpen(Session session) throws IOException {
         this.session = session;
         websocketPools.add(this);
         index = true;
